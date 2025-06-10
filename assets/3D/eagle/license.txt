@@ -1,0 +1,11 @@
+Model Information:
+* title:	Realistic Animated Eagle 3D Model
+* source:	https://sketchfab.com/3d-models/realistic-animated-eagle-3d-model-bc7e9d00c89e4caf89a0cc1b290fdbcb
+* author:	WildMesh 3D Free (https://sketchfab.com/WildMesh_3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Realistic Animated Eagle 3D Model" (https://sketchfab.com/3d-models/realistic-animated-eagle-3d-model-bc7e9d00c89e4caf89a0cc1b290fdbcb) by WildMesh 3D Free (https://sketchfab.com/WildMesh_3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

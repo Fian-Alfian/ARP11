@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Generator</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!-- <script src="https://cdn.jsdliver.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.min.js"></script> -->
+    <script>
+        AFRAME.registerComponent('soundhandler', {
+            init: function () {
+                this.soundEl = document.querySelector('[sound]');
+                this.marker = document.querySelector('a-marker');
+                this.visible = false;
+            },
+            tick: function () {
+                if (this.marker.object3D.visible && !this.visible) {
+                    this.soundEl.components.sound.stopSound();
+                    this.soundEl.components.sound.playSound();
+                    this.visible = true;
+                } else if (!this.marker.object3D.visible) {
+                    this.visible = false;
+                }
+            }
+        });
+    </script>
+</head>
+
+<body style="margin: 0; overflow: hidden">
+    <a-scene embedded arjs>
+        <a-marker preset="hiro" soundhandler>
+
+            <a-entity position="0 0 0"
+                animation="property: rotation; to: 0 360 0; dur: 6000; loop: true; easing: linear;">
+                <a-entity gltf-model="./assets/3d/eagle/scene.gltf" scale="0.3 0.3 0.3" position=" 0 1.5 0"
+                    rotation="0 0 0"></a-entity>
+            </a-entity>
+            <a-entity gltf-model="./assets/3d/plate/scene.gltf" scale="1 1 1" position=" 0 0 0" rotation="0 0 0"></a-entity>
+
+        </a-marker>
+        <a-entity sound="src: ./assets/audio/eagle-281163.mp3" autoplay="false"></a-entity>
+        <a-camera></a-camera>
+    </a-scene>
+</body>
+
+</html>
